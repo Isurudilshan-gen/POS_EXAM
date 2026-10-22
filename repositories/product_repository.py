@@ -9,3 +9,5 @@ def get_product_by_id(db : Session, product_id : int):
 def get_product_by_code(db: Session, product_code : int):
     return db.query(Product).filter(Product.product_code == product_code).first()
 
+def get_all_products(db : Session):
+    return db.query(Product).all()
