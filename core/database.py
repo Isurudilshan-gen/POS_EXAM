@@ -5,7 +5,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:password123@localhost:5432/exam_db")
+DATABASE_URL = os.getenv("DATABASE_URL=postgresql://postgres:postgres@localhost:5432/pos_db")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
